@@ -27,15 +27,12 @@ body{
 .card{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 40rem;
+    width: 37rem;
     height:fit-content;
     background-color: $card;
     border-radius: 10px;
     overflow: hidden;
 
-    &__image{
-        
-    }
 
     &__image img{
         display: block;
@@ -46,7 +43,7 @@ body{
     
     &__content{
         font-family: 'Montserrat', sans-serif;
-        padding: 1rem 2.2rem;
+        padding: 1rem 2rem;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

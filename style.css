@@ -2,35 +2,41 @@ body {
   background-color: hsl(30deg, 38%, 92%);
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .container {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
 }
 
 .card {
-  width: 95%;
-  background-color: hsl(0deg, 0%, 100%);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 40rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  background-color: hsl(0deg, 0%, 100%);
   border-radius: 10px;
-}
-.card__image {
-  width: 100%;
-  height: 100%;
+  overflow: hidden;
 }
 .card__image img {
-  border-radius: 10px 10px 0 0;
-  max-width: 100%;
+  display: block;
   max-height: 100%;
+  max-width: 100%;
 }
 .card__content {
   font-family: "Montserrat", sans-serif;
-  padding: 11px 20px 0px;
+  padding: 1rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .card__type {
   font-size: 0.7em;
@@ -40,11 +46,11 @@ body {
 }
 .card__title {
   font-family: "Fraunces", serif;
-  margin: 10px 0;
   line-height: 1em;
+  font-size: 2.2rem;
 }
 .card__text {
-  font-size: 14px;
+  font-size: 0.9rem;
   color: hsl(228deg, 12%, 48%);
   line-height: 1.5em;
 }
@@ -71,28 +77,38 @@ body {
   color: hsl(0deg, 0%, 100%);
   height: 50px;
   border-radius: 8px;
-  margin-top: 17px;
+  transition: background-color 0.3s ease;
 }
 .card__button img {
   margin-right: 5px;
 }
+.card__button:hover {
+  cursor: pointer;
+  background-color: hsl(158deg, 38%, 21%);
+}
 
-@media screen and (min-width: 610px) {
+@media all and (max-width: 376px) {
   .card {
-    flex-direction: row;
-    width: 550px;
+    display: block;
+    width: 40rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 1.5rem 1rem;
   }
   .card__content {
-    flex: 1;
-    box-sizing: border-box;
-    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.4rem 1.5rem;
   }
-  .card__image {
-    flex: 1.15;
+  .card__title {
+    font-size: 2rem;
   }
-  .card__image img {
-    content: url(images/image-product-desktop.jpg);
-    border-radius: 10px 0 0 10px;
-    vertical-align: middle;
+  .card__type, .card__title, .card__text, .card__price, .card__button {
+    margin: 1rem 0 0;
+  }
+  .card__button {
+    margin: 0 0 1rem;
   }
 }/*# sourceMappingURL=style.css.map */

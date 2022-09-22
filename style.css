@@ -18,7 +18,7 @@ body {
 .card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 35rem;
+  width: 38rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
